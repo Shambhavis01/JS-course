@@ -1,0 +1,33 @@
+<!--for DOM we need to make a html file-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Learning</title>
+    
+</head>
+<body style="background-color: black;color:aliceblue">
+    <div class="week">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+        <div class="day">Thursday</div>
+    </div>
+</body>
+<script>
+    const week = document.querySelector('.week');
+  // console.log(week);
+ //  console.log(week.children);
+ // console.log(week.children[1].innerHTML);
+  for(let i=0;i<week.children.length;i++){
+    console.log(week.children[i].innerHTML);
+  }
+  const dayOne=document.querySelector('.day')
+    console.log(dayOne);
+    console.log(dayOne.parentElement);
+    console.log(dayOne.nextElementSibling);
+    console.log("Nodes:",week.childNodes)
+  
+  </script>
+   </html>

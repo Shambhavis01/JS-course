@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Events</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <ul id="xyz">
+        <li>Click Me</li>
+        <li>Click Me</li>
+        <li>Click Me</li>
+    <li id="yyz">Click Me</li>
+    </ul>
+</body>
+<script>
+   // document.getElementById('xyz').onclick=function(){
+  //   alert("Hello World")
+   // }
+  // document.getElementById('xyz').addEventListener('click',function(){
+  //  alert("Hello World")
+ //  })
+   //attachEvent is not supported in all browsers
+  //jQuery is used to handle events in all browsers
+//document.getElementById('xyz').addEventListener('mouseover',function(e){
+ // console.log(e);
+ //  },false)
+ //type,timestamp,clientX,clientY,offsetX,offsetY,pageX,pageY,screenX,screenY  
+//target,srcElement,relatedTarget,fromElement,toElement
+//altkey,ctrlKey,metaKey,shiftKey
+//document.getElementById('xyz').addEventListener('click',function(e){
+//console.log("clicked id1");
+//},true)
+//document.getElementById('yyz').addEventListener('click',function(e){
+//console.log("clicked id2");
+//},true)
+document.querySelector('ul').addEventListener('click',function(e){
+console.log(e.target.tagName);
+if(e.target.tagName === 'li'){
+    console.log(e.target.id);
+let removeItem=e.target.parentNode.
+removeItem.remove(removeItem)
+}
+})
+//let removeItem=e.target.parentNode.removeChild(e.target)
+//removeItem.parentNode.removeChild(removeItem)
+//})
+ </script>
+</html>
