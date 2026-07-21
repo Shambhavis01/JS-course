@@ -5,7 +5,7 @@ function SetUsername(username){
 }
 function createUser(username,email,passwords){
    // SetUsername(username)//not called in output
-    SetUsername.call(this,username)//using call,holds the reference
+    SetUsername.call(this,username)//using call,holds the reference,passes current exec context to some other function
     this.email=email
     this.passwords=passwords
 }
