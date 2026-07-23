@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Lexical Scope & Closure Demo</title>
+</head>
+<body>
+  <h1>Open Console to See Output</h1>
+
+  <script>
+    // 🔹 Example 1: Lexical Scoping
+    function outerFunction() {
+      let outerVar = "I am from outer scope";
+
+      function innerFunction() {
+        console.log("Lexical Scope Example:", outerVar);
+      }
+
+      innerFunction();
+    }
+    outerFunction();
+
+    // 🔹 Example 2: Closure (Counter)
+    function createCounter() {
+      let count = 0;
+
+      return function () {
+        count++;
+        console.log("Closure Counter Example:", count);
+      };
+    }
+
+    const counter1 = createCounter();
+    counter1(); // 1
+    counter1(); // 2
+    counter1(); // 3
+
+    const counter2 = createCounter(); // ✅ only once
+    counter2(); // 1 (separate closure)
+    counter2(); // 2
+
+    // 🔹 Example 3: Closure with Greeting
+    function greet(name) {
+      return function(message) {
+        console.log(`${message}, ${name}!`);
+      };
+    }
+
+    const greetShambhavi = greet("Shambhavi");
+    greetShambhavi("Hello");   // Hello, Shambhavi!
+    greetShambhavi("Welcome"); // Welcome, Shambhavi!
+  </script>
+</body>
+</html>
