@@ -3,7 +3,7 @@
 let name="Mahi"
 let age=22
 let isLoggedIn=false
-//number =>2 to the power of 53
+//number =>2 to the power 53
 //bigint 
 //string =>""
 //boolean =>true or false

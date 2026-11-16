@@ -9,3 +9,5 @@ accountCity  = "Los Angeles"
 console.log(accountId);
 console.log(accountEmail);
 console.log(accountCity);
+
+//prefer not to use var because of its global scope and hoisting issues. Use let and const instead.
